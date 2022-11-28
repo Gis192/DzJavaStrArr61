@@ -7,11 +7,14 @@ public class main {
         int averageSales = service.averageSalesMouth(cash);
         int maxSales = service.maxSalesMouth(cash);
         int minSales = service.minSalesMouth(cash);
-        int count = service.moreAverageSalesMouth(cash);
+        int countMin = service.bellowAverageSalesMouth(cash);
+        int countMax = service.moreAverageSalesMouth(cash);
         System.out.println(sumAll);
         System.out.println(averageSales);
         System.out.println(maxSales);
         System.out.println(minSales);
-        System.out.println(count);
+        System.out.println(countMin);
+        System.out.println(countMax);
+
     }
 }

@@ -20,27 +20,29 @@ public class StatsService {
         return averageSales;
     }
 
-    public int maxSalesMouth (int[] cash){
-        int maxSales =0;
+    public int maxSalesMouth(int[] cash) {
+        int maxSales = 0;
         for (int i = 0; i < cash.length; i++) {
             if (cash[i] > cash[maxSales]) {
-                maxSales =i;
+                maxSales = i;
 
             }
         }
-        return maxSales+1;
+        return maxSales + 1;
     }
-    public int minSalesMouth (int[] cash){
-        int minSales =0;
+
+    public int minSalesMouth(int[] cash) {
+        int minSales = 0;
         for (int i = 0; i < cash.length; i++) {
             if (cash[i] < cash[minSales]) {
-                minSales =i;
+                minSales = i;
 
             }
         }
-        return minSales+1;
+        return minSales + 1;
     }
-    public int moreAverageSalesMouth (int[] cash) {
+
+    public int bellowAverageSalesMouth(int[] cash) {
         int quantityMouth = 0;
         int sumAll = 0;
         for (int i = 0; i < cash.length; i++) {
@@ -50,7 +52,24 @@ public class StatsService {
         int averageSales = sumAll / quantityMouth;
         int count = 0;
         for (int i = 0; i < cash.length; i++) {
-            if (cash[i] > averageSales){
+            if (cash[i] < averageSales) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int moreAverageSalesMouth(int[] cash) {
+        int quantityMouth = 0;
+        int sumAll = 0;
+        for (int i = 0; i < cash.length; i++) {
+            quantityMouth++;
+            sumAll += cash[i];
+        }
+        int averageSales = sumAll / quantityMouth;
+        int count = 0;
+        for (int i = 0; i < cash.length; i++) {
+            if (cash[i] > averageSales) {
                 count++;
             }
         }
