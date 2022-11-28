@@ -50,13 +50,13 @@ public class StatsService {
             sumAll += cash[i];
         }
         int averageSales = sumAll / quantityMouth;
-        int count = 0;
+        int countB = 0;
         for (int i = 0; i < cash.length; i++) {
             if (cash[i] < averageSales) {
-                count++;
+                countB++;
             }
         }
-        return count;
+        return countB;
     }
 
     public int moreAverageSalesMouth(int[] cash) {
@@ -67,12 +67,12 @@ public class StatsService {
             sumAll += cash[i];
         }
         int averageSales = sumAll / quantityMouth;
-        int count = 0;
+        int countM = 0;
         for (int i = 0; i < cash.length; i++) {
             if (cash[i] > averageSales) {
-                count++;
+                countM++;
             }
         }
-        return count;
+        return countM;
     }
 }

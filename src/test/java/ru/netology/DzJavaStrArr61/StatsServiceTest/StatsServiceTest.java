@@ -1,3 +1,5 @@
+package ru.netology.DzJavaStrArr61.StatsServiceTest;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.DzJavaStrArr61.StatsService.StatsService;

@@ -1,10 +1,12 @@
 package ru.netology.DzJavaStrArr61.StatsServiceM;
 
+// Это файл написал когда заглянул в разбор занятий и понял что можно сделать по короче
+
 public class StatsServiceM {
     public long sumAllMones(long[] cash) {
         long sumAll = 0;
-        for (long mones : cash) {
-            sumAll += mones;
+        for (long sale : cash) {
+            sumAll += sale;
         }
         return sumAll;
     }
@@ -36,25 +38,26 @@ public class StatsServiceM {
     }
 
     public int bellowAverageSalesMouth(long[] cash) {
-        long averageSales = sumAllMones(cash) / cash.length;
         int countB = 0;
-        for (int i = 0; i < cash.length; i++) {
-            if (cash[i] < averageSales) {
+        for (long sale : cash) {
+            if (sale > averageSalesMouth(cash)) {
                 countB++;
             }
         }
         return countB;
+
     }
 
     public int moreAverageSalesMouth(long[] cash) {
-        long averageSales = sumAllMones(cash) / cash.length;
         int countM = 0;
-        for (int i = 0; i < cash.length; i++) {
-            if (cash[i] > averageSales) {
+        for (long sale : cash) {
+            if (sale < averageSalesMouth(cash)) {
                 countM++;
             }
         }
-        return countM;
+            return countM;
     }
 }
+
+
 

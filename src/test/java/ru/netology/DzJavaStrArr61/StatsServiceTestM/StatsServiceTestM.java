@@ -1,7 +1,9 @@
+package ru.netology.DzJavaStrArr61.StatsServiceTestM;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.DzJavaStrArr61.StatsServiceM.StatsServiceM;
-
+// А как запустить через Ctrl + Ctrl  это файл? у меня запускает только первый
 public class StatsServiceTestM {
     @Test
     public void sumAll() {
@@ -54,7 +56,7 @@ public class StatsServiceTestM {
     public void bellowAverageSalesMouth() {
         StatsServiceM service = new StatsServiceM();
         long[] cash = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int excpectedBellow = 4;
+        int excpectedBellow = 5;
         long actualBellow = service.bellowAverageSalesMouth(cash);
         Assertions.assertEquals(excpectedBellow, actualBellow);
     }
