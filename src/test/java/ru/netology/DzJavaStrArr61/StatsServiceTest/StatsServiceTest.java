@@ -41,6 +41,7 @@ public class StatsServiceTest {
         int actualMin = service.minSalesMouth(cash);
         Assertions.assertEquals(excpectedMin, actualMin);
     }
+
     @Test
     public void bellowAverageSalesMouth() {
         StatsService service = new StatsService();
@@ -57,6 +58,5 @@ public class StatsServiceTest {
         int excpectedMore = 5;
         int actualMore = service.moreAverageSalesMouth(cash);
         Assertions.assertEquals(excpectedMore, actualMore);
-
     }
 }
